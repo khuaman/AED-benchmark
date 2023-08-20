@@ -5,13 +5,14 @@
 #include <fstream>
 #include <chrono>
 #include <random>
+#include <climits>
 #include "heapsort.h"
 using namespace std;
 
 int main() {
     std::random_device rd;
     std::mt19937_64 generator(rd());
-    std::uniform_int_distribution<long long int> distribution(1, 9223372036854775807);
+    std::uniform_int_distribution<long long int> distribution(1, LLONG_MAX);
 
 
     // 10 elementos
