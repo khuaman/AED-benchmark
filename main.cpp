@@ -6,22 +6,45 @@
 #include <chrono>
 #include <random>
 #include <climits>
+#include <cstdlib>
+#include <ctime>
 #include "heapsort.h"
+#include "insertionsort.h"
 using namespace std;
 
-int main() {
-    std::random_device rd;
-    std::mt19937_64 generator(rd());
-    std::uniform_int_distribution<long long int> distribution(1, LLONG_MAX);
+void execute(long long int size_of_array){
+    srand(time(NULL));
+    auto *original_array = new long long int[size_of_array];
+    for (auto i = 0; i < size_of_array; i++) {
+        //array[i] = distribution(rand() % LLONG_MAX);
+        original_array[i] = rand() % LLONG_MAX;
+    }
 
+
+}
+int main() {
+    //std::random_device rd;
+    //std::mt19937_64 generator(rd());
+    //std::uniform_int_distribution<long long int> distribution(1, LLONG_MAX);
+    srand(time(NULL));
+    // 10
+    long long int size = 100; // Size of array
+    // 100
+    size = 1000;
+    // 1000
+    size = 1000;
+    // 10000
+    // 100000
+    // 1000000
 
     // 10 elementos
-    const long long int size = 1000000; // Size of array
-    auto array = new long long int[size];
+    size = 10; // Size of array
+    auto *array = new long long int[size];
 
 
     for (auto i = 0; i < size; i++) {
-        array[i] = distribution(generator);
+        //array[i] = distribution(rand() % LLONG_MAX);
+        array[i] = rand() % LLONG_MAX;
     }
 
     //auto N = sizeof(array)/sizeof(array[0]);  Not necessary because obtain the same number of size
@@ -32,7 +55,7 @@ int main() {
     heapSort(array, size);
 
     auto end = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 
     delete[] array;
 
@@ -48,7 +71,7 @@ int main() {
     }
 
     // Escribe nueva data en el archivo sin borrar lo existente
-    archivo_salida << "Execution time of heapsort with array with "<< size << " elements:" << duration.count() << endl;
+    archivo_salida << "Execution time of heapsort with array with "<< size << " elements: " << duration.count() << " microseconds"<< endl;
 
     // Cierra el archivo
     archivo_salida.close();
