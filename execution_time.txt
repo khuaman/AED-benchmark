@@ -1,0 +1,15 @@
+Execution time of insertionsort with array of 10 elements: 2 microseconds
+Execution time of introsort with array of 10 elements: 9 microseconds
+Execution time of heapsort with array of 10 elements: 3 microseconds
+Execution time of insertionsort with array of 100 elements: 35 microseconds
+Execution time of introsort with array of 100 elements: 54 microseconds
+Execution time of heapsort with array of 100 elements: 36 microseconds
+Execution time of insertionsort with array of 1000 elements: 2515 microseconds
+Execution time of introsort with array of 1000 elements: 753 microseconds
+Execution time of heapsort with array of 1000 elements: 416 microseconds
+Execution time of insertionsort with array of 10000 elements: 245307 microseconds
+Execution time of introsort with array of 10000 elements: 9446 microseconds
+Execution time of heapsort with array of 10000 elements: 5859 microseconds
+Execution time of insertionsort with array of 100000 elements: 24193205 microseconds
+Execution time of introsort with array of 100000 elements: 113180 microseconds
+Execution time of heapsort with array of 100000 elements: 62338 microseconds
