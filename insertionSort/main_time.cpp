@@ -35,12 +35,10 @@ int main(int argc, char const *argv[])
 
     auto end = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-
     delete[] arr;
 
     cout << "Execution time: " << duration.count() << " milliseconds" << endl;
-
-
+    
     ofstream archivo_salida; // Declara una instancia de ofstream para escritura
     archivo_salida.open("../execution_time.txt", std::ios::app); // Abre el archivo en modo "append" para añadir datos
 
@@ -54,7 +52,5 @@ int main(int argc, char const *argv[])
 
     // Cierra el archivo
     archivo_salida.close();
-
-
     return 0;
 }
