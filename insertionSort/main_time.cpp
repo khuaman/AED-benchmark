@@ -41,10 +41,8 @@ int main(int argc, char const *argv[])
         cerr << "No se pudo abrir el archivo." << endl;
         return 1;
     }
-
     // Escribe nueva data en el archivo sin borrar lo existente
     archivo_salida << "Execution time of heapsort with array with "  << N << " elements:" << duration.count() << endl;
-
     // Cierra el archivo
     archivo_salida.close();
     return 0;
