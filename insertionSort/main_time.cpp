@@ -23,22 +23,17 @@ int main(int argc, char const *argv[])
     for (long long int i = 0; i < N; i++) {
         //cout << arr[i] << " ";
     }
-
     //cout << endl;
-
     auto start = std::chrono::high_resolution_clock::now();
 
     insertionSort(arr, N);
     for (long long int i = 0; i < N; i++) {
         //cout << arr[i] << " ";
     }
-
     auto end = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
     delete[] arr;
-
     cout << "Execution time: " << duration.count() << " milliseconds" << endl;
-    
     ofstream archivo_salida; // Declara una instancia de ofstream para escritura
     archivo_salida.open("../execution_time.txt", std::ios::app); // Abre el archivo en modo "append" para añadir datos
 
