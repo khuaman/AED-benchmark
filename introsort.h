@@ -51,7 +51,6 @@ void insertionSort(int arr[], int n) {
 int partition(int arr[], int low, int high) {
     int pivot = arr[high];
     int i = (low - 1);
-
     for (int j = low; j <= high - 1; j++) {
         if (arr[j] < pivot) {
             i++;
@@ -61,7 +60,6 @@ int partition(int arr[], int low, int high) {
     std::swap(arr[i + 1], arr[high]);
     return (i + 1);
 }
-
 // Función de ordenamiento Quicksort
 void quicksort(int arr[], int low, int high, int depthLimit) {
     while (high - low > 16) {
@@ -70,15 +68,12 @@ void quicksort(int arr[], int low, int high, int depthLimit) {
             return;
         }
         depthLimit--;
-
         int pivotIndex = partition(arr, low, high);
         quicksort(arr, low, pivotIndex - 1, depthLimit);
         low = pivotIndex + 1;
     }
-
     insertionSort(arr + low, high - low + 1);
 }
-
 // Función de ordenamiento Introsort
 void introsort(int arr[], int n) {
     int depthLimit = 2 * static_cast<int>(std::log2(n));
