@@ -1,9 +1,0 @@
-Execution time of heapsort with array with 10000 elements:2
-Execution time of heapsort with array with 1000000 elements:459
-Execution time of heapsort with array with 1000000 elements:1149
-Execution time of heapsort with array with 1000000 elements:1105
-Execution time of heapsort with array with 1000000 elements: 1042 milliseconds
-Execution time of heapsort with array with 1000000 elements: 1136 milliseconds
-Execution time of heapsort with array with 1000000 elements: 1061 milliseconds
-Execution time of heapsort with array with 10 elements: 0 milliseconds
-Execution time of heapsort with array with 10 elements: 2 milliseconds

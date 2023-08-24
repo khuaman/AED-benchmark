@@ -6,7 +6,7 @@ int main() {
     srand(time(NULL));
 
     long long int N = 100;
-    int *arr = new int[N];
+    long long int* arr = new long long int[N];
     for (long long int i = 0; i < N; i++) {
         arr[i] = rand() % 100;
     }
@@ -32,6 +32,6 @@ int main() {
     std::chrono::duration<double> elapsed = end - start;
     std::cout << "Time taken by Introsort: " << elapsed.count() << " seconds" << std::endl;
 
-    delete[] arr;
+    delete[] arr;Introsort
     return 0;
 }
