@@ -56,9 +56,7 @@ int main() {
 
     auto end = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
-
     delete[] array;
-
     cout << "Execution time: " << duration.count() << " milliseconds" << endl;
 
     ofstream archivo_salida; // Declara una instancia de ofstream para escritura
