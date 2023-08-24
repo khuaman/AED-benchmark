@@ -61,7 +61,6 @@ int main() {
 
     cout << "Execution time: " << duration.count() << " milliseconds" << endl;
 
-
     ofstream archivo_salida; // Declara una instancia de ofstream para escritura
     archivo_salida.open("../execution_time.txt", std::ios::app); // Abre el archivo en modo "append" para añadir datos
 
@@ -69,7 +68,6 @@ int main() {
         cerr << "No se pudo abrir el archivo." << endl;
         return 1;
     }
-
     // Escribe nueva data en el archivo sin borrar lo existente
     archivo_salida << "Execution time of heapsort with array with "<< size << " elements: " << duration.count() << " microseconds"<< endl;
 
