@@ -67,6 +67,7 @@ int main() {
         for (auto algo : algorithm){
             execute(algo,array,size);
         }
+        delete[] array;
     }
 
     //auto N = sizeof(array)/sizeof(array[0]);  Not necessary because obtain the same number of size
